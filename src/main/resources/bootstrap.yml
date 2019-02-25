@@ -1,0 +1,14 @@
+spring:
+   application:
+      name: ffservice
+   h2:
+      console:
+         enabled: true
+   main:
+      allow-bean-definition-overriding: true
+
+logging:
+   file: /Users/rkamat/ffservice/ffservice.log
+   level:
+      com.test.ps.CLASSPATHINFO: INFO
+      org.springframework: INFO

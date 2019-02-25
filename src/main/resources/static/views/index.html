@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body ng-app="ffServiceApp" ng-controller="ffController">
+<div style="width:500px;color:white;background-color: midnightblue;"><span>Feature Flag Manager</span></div>
+<table data-ng-init="home()" width="500px">
+    <thead>
+        <tr align="left" style="color:darkblue">
+            <th>Region</th>
+            <th ng-repeat="row in ffresults">{{row.country}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr align="left" style="background-color: lightgrey">
+            <td>Identity Info</td>
+            <td ng-repeat="row in ffresults">
+                <input type="checkbox" id="{{row.id}}" ng-model="row.checked">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div style="width:500px">
+    <input type="button" align="right" value="Cancel" ng-click="home()">
+    <input type="button" align="right" value="Save" ng-click="saveFeatureFlag(ffresults)">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
